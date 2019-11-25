@@ -1,0 +1,27 @@
+
+  <input id="NameUser" value="Name"><br>
+
+  <input id="PhoneUser" value="Phone"><br>
+
+  <input id="EmailUser" value="Email"><br>
+  <button onclick="SEND()" >SEND</button>
+
+<script>
+    function SEND(){
+        var xhr = new XMLHttpRequest();
+        var NameUser = document.getElementById('NameUser').value
+        var PhoneUser = document.getElementById('PhoneUser').value
+        var EmailUser = document.getElementById('EmailUser').value
+        var callBeac = document.getElementById('callBeac')
+        callBeac.textContent = "Отправлено"
+        var data =  `Name=${NameUser}&Phone=${PhoneUser}&Email=${EmailUser}`;
+
+        xhr.open("POST", 'mail.php', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+        // xhr.onreadystatechange = ...;
+
+        xhr.send(data);
+    }
+
+</script>

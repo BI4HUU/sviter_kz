@@ -1,0 +1,1 @@
+<?php include 'header.php'?><?php include 'bodyIndex.php'?><?php include 'footer.php'?><?php include 'footer.php'?>
